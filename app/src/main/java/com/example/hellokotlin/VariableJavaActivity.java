@@ -12,7 +12,7 @@ import java.util.Locale;
 
 public class VariableJavaActivity extends AppCompatActivity {
 
-    TextView txtActivityStartTime, txtCoubtBtnClicks;
+    TextView txtActivityStartTime, txtCoubtBtnClicks, txtElapsedTime;
     Button btnClickMe;
     final long startTime = System.currentTimeMillis();
 
@@ -26,17 +26,21 @@ public class VariableJavaActivity extends AppCompatActivity {
 
         txtActivityStartTime = findViewById(R.id.txtActivityStartTime);
         txtCoubtBtnClicks = findViewById(R.id.txtCountBtnClicks);
+        txtElapsedTime = findViewById(R.id.txtElapsedTime);
         btnClickMe = findViewById(R.id.btnClickme);
 
         btnClickMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 clickCount++;
+                long elapsedSeconds =((System.currentTimeMillis() - startTime) / 1000);
                 txtCoubtBtnClicks.setText("Button clicks: " + clickCount);
+                txtElapsedTime.setText(elapsedSeconds + "seconds elspsed");
             }
         });
 
         String timeText = new SimpleDateFormat("HH:mm:ss", Locale.KOREA).format(startTime);
+
         txtActivityStartTime.setText("Activity start time = " + timeText);
 
     }
