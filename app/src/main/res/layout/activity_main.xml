@@ -30,16 +30,14 @@
         android:id="@+id/btnVarJava"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="22dp"
         android:layout_marginRight="22dp"
-        android:layout_marginBottom="198dp"
         android:text="variable - java"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnVarKotlin"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnKotlin"
-        app:layout_constraintVertical_bias="0.555" />
+        app:layout_constraintTop_toBottomOf="@+id/btnKotlin" />
 
     <Button
         android:id="@+id/btnVarKotlin"
@@ -51,4 +49,23 @@
         android:text="variable - kotlin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnKotlin" />
+
+    <Button
+        android:id="@+id/btnFlowControlJava"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Flowcontrol-j"
+        app:layout_constraintStart_toStartOf="@+id/btnVarJava"
+        app:layout_constraintTop_toBottomOf="@+id/btnVarJava" />
+
+    <Button
+        android:id="@+id/btnFlowControlKotlin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="flowcontrol-k"
+        app:layout_constraintEnd_toEndOf="@+id/btnVarKotlin"
+        app:layout_constraintTop_toTopOf="@+id/btnFlowControlJava" />
 </androidx.constraintlayout.widget.ConstraintLayout>
